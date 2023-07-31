@@ -2,14 +2,15 @@ import serial
 import glob
 import warnings
 import serial.tools.list_ports
+import virtualserialports
 import sys
 #import pyfirmata
 import time
 from asyncio import get_event_loop
 
-
+virtualserialports.run(2, loopback=False, debug=False)
 ser = serial.Serial()
-ser = serial.Serial("COM26", 57600, timeout=1)
+ser = serial.Serial("/dev/pts/0", 57600, timeout=1)
 msg = ser.read_until(b'\n')
 i = 0
 
