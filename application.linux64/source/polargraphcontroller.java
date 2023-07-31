@@ -632,7 +632,7 @@ public void setup()
         portName = serialPorts[getSerialPortNumber()];
         myPort = new Serial(this, portName, getBaudRate());
         
-        portName2 = "/dev/pts/1"; //DONT HARDCODE THIS MAYBE
+        portName2 = "/dev/ttyS11"; //DONT HARDCODE THIS MAYBE
         myPort2 = new Serial(this, portName2, baudRate2);
         
         //read bytes into a buffer until you get a linefeed (ASCII 10):
