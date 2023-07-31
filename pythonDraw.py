@@ -60,7 +60,7 @@ PATH_SORT_CENTRE_FIRST = 3
 
 PAGE_WIDTH_MM = 2274.0
 MM_PER_PIXEL = 1.0
-SAVE_PATH="C:\processing-2.2.1"
+SAVE_PATH="\home\iplstaff"
 #completeName = os.path.join(SAVE_PATH, name_of_file+".txt") 
 
 STEPS_PER_REV = 200.0 #in steps
