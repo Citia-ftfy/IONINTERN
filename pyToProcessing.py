@@ -12,6 +12,8 @@ ser = serial.Serial("/dev/ttyS10", 57600, timeout=1)
 msg = ser.read_until(b'\n')
 i = 0
 
+def sendCmd(filename):
+    ser.write(b'LOAD'+filename+'\n')
 
 while(True):
     time.sleep(1)
