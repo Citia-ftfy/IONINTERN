@@ -201,7 +201,6 @@ def robo_magnet(magIsOn):
         mC.set_high()
     else:
         mC.set_low()
-#TODO NOT TRUE
 
 def moveMarker(toOrFrom,positionsArray):
     #toOrFrom = True: going to gondola, False: coming from gondola
