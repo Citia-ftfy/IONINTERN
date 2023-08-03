@@ -633,7 +633,7 @@ public void setup()
         myPort = new Serial(this, portName, getBaudRate());
         
         int gspn = 12;
-        portName2 = serialPorts[12];
+        portName2 = "/tmp/virtualcom0";
         myPort2 = new Serial(this, portName2, baudRate2);
         
         //read bytes into a buffer until you get a linefeed (ASCII 10):
