@@ -598,7 +598,8 @@ void setup()
         portName = serialPorts[getSerialPortNumber()];
         myPort = new Serial(this, portName, getBaudRate());
         
-        portName2 = "/dev/ttyS11"; //DONT HARDCODE THIS MAYBE
+        int gspn = 12;
+        portName2 = serialPorts[12];
         myPort2 = new Serial(this, portName2, baudRate2);
         
         //read bytes into a buffer until you get a linefeed (ASCII 10):
@@ -2746,7 +2747,12 @@ void serialEvent(Serial myPort)
   {
     drawbotReady = true;
     setHardwareVersionFromIncoming(incoming);
+    try{
+      
     myPort2.write("READY");
+    } catch(Exception e){
+      //print(e.getMessage);
+    }
   }
   else if (incoming.startsWith("MSG"))
     readMachineMessage(incoming);
