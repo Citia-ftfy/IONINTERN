@@ -8,7 +8,7 @@ import time
 from asyncio import get_event_loop
 
 ser = serial.Serial()
-ser = serial.Serial("/dev/ttyS10", 57600, timeout=1)
+ser = serial.Serial("/tmp/virtualcom1", 57600, timeout=1)
 msg = ser.read_until(b'\n')
 i = 0
 

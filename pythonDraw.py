@@ -64,7 +64,7 @@ SAVE_PATH="\home\pythonrunner\IONINTERN\application.linux64"
 #completeName = os.path.join(SAVE_PATH, name_of_file+".txt") 
 
 STEPS_PER_REV = 200.0 #in steps
-MM_PER_REV = 65.0 #in mm
+MM_PER_REV = 149.00 #in mm
 
 STEPS_PER_MM = STEPS_PER_REV/MM_PER_REV
 PAGE_WIDTH = PAGE_WIDTH_MM*STEPS_PER_MM
@@ -109,8 +109,8 @@ def writeCommands(name_of_file):
     file1.close()
 
 def goXY(x,y):
-    x=x+int(PAGE_WIDTH_MM/2)-256
-    y=y-493
+    x=x+int(PAGE_WIDTH_MM/2)-229
+    y=y-785
     a=CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END"
     return a
 
@@ -225,8 +225,8 @@ def testback():
 
 
 #testback()
-drawPixels("blob.png")
-#testDrawBox()
+#drawPixels("blob.png")
+testDrawBox()
 writeCommands("test")
 
 
