@@ -227,9 +227,9 @@ def testback():
     cv2.imwrite("abb.png",blank_image)
 
 
-testback()
-#drawPixels("blob.png")
-testDrawBox()
+#testback()
+drawPixels("blob.png")
+#testDrawBox()
 writeCommands("test")
 
 
