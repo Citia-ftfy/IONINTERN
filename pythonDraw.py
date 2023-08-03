@@ -112,8 +112,8 @@ def writeCommands(name_of_file):
 def goXY(x,y):
     x=x+int(PAGE_WIDTH_MM/2)-229
     y=y-785
-    x=int(x/STEPMULTIPLIER)
-    y=int(y/STEPMULTIPLIER)
+    #x=int(x/STEPMULTIPLIER)
+    #y=int(y/STEPMULTIPLIER)
     a=CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END"
     return a
 
