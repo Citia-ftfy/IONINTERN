@@ -76,7 +76,7 @@ MAX_SEGMENT_LENGTH = 2
 commandQueue = []
 
 def stepsToMM(num):
-    a = num*STEPS_PER_MM
+    a = num*STEPS_PER_MM/STEPMULTIPLIER
     return a
 
 def getApos(xpos,ypos):
