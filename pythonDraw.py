@@ -65,6 +65,7 @@ SAVE_PATH="/home/iplstaff/python_runner/IONINTERN/application.linux64"
 
 STEPS_PER_REV = 200.0 #in steps
 MM_PER_REV = 149.00 #in mm
+STEPMULTIPLIER = 2.0 
 
 STEPS_PER_MM = STEPS_PER_REV/MM_PER_REV
 PAGE_WIDTH = PAGE_WIDTH_MM*STEPS_PER_MM
@@ -105,12 +106,14 @@ def writeCommands(name_of_file):
     for command in commandQueue:
         file1.write(command+'\n')
     file1.write(CMD_PENUP+"180,END"+'\n')
-    file1.write(CMD_CHANGELENGTH+"3766,3766,END")
+    file1.write(CMD_CHANGELENGTH+"1972,1973,END")
     file1.close()
 
 def goXY(x,y):
     x=x+int(PAGE_WIDTH_MM/2)-229
     y=y-785
+    x=int(x/STEPMULTIPLIER)
+    y=int(y/STEPMULTIPLIER)
     a=CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END"
     return a
 
