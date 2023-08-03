@@ -76,7 +76,7 @@ MAX_SEGMENT_LENGTH = 2
 commandQueue = []
 
 def stepsToMM(num):
-    a = num*STEPS_PER_MM/STEPMULTIPLIER
+    a = num*STEPS_PER_MM
     return a
 
 def getApos(xpos,ypos):
@@ -118,19 +118,19 @@ def goXY(x,y):
     return a
 
 def testDrawBox():
-    x=1500
+    x=1000
     y=-600
     addCommand(goXY(x,y))
     #addCommand(CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END")
-    x=1450
+    x=950
     y=-600
     addCommand(goXY(x,y))
     #addCommand(CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END")
-    x=1450
+    x=950
     y=-550
     addCommand(goXY(x,y))
     #addCommand(CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END")
-    x=1500
+    x=1000
     y=-550
     addCommand(goXY(x,y))
     #addCommand(CMD_CHANGELENGTHDIRECT+str(int(getApos(stepsToMM(x),stepsToMM(y))))+","+str(int(getBpos(stepsToMM(x),stepsToMM(y))))+","+str(MAX_SEGMENT_LENGTH)+",END")
